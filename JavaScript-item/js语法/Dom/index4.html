@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+</head>
+<body>
+<input type="email" class="form-control" id="name" placeholder="mingzi" onkeydown="myKeyDown(this.id)" onkeyup="myKeyUp(this.id)">
+<!--<input id="name" type="text" onkeydown="myKeyDown(this.id)" onkeyup="myKeyUp(this.id)">-->
+<script>
+    
+    /*输出输入的字符*/
+    function myKeyDown(id) {
+        console.log(document.getElementById(id).value);
+    }
+    /*按键结束，字体转换为大写*/
+    function myKeyUp(id) {
+        var text = document.getElementById(id).value;
+        document.getElementById(id).value = text.toUpperCase();}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jquery在线qq客服插件</title>
+    <!--需要其它风格，可导入“style/”目录下的其它样式表文件-->
+    <link rel="stylesheet" type="text/css" href="style/default_blue.css"/>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <!--低版本jQuery可以不调用jquery-migrate-1.2.1.min.js-->
+    <script src="http://www.jq22.com/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script language="javascript" src="js/sonline.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("body").Sonline({
+                Position:"right",//left或right
+                Top:478,//顶部距离，默认200px
+                Effect:true, //滚动或者固定两种方式，布尔值：true或false
+                DefaultsOpen:true, //默认展开：true,默认收缩：false
+                Qqlist:"8888888|客服01,8888888|客服02,8888888|客服03,8888888|客服04,8888888|客服05" //多个QQ用','隔开，QQ和客服名用'|'隔开
+            });
+        })
+    </script>
+</head>
+<body style="height:1000px;">
+<div style="height:2500px"></div>
+</body>
+</html>

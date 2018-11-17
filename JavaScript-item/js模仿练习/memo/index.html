@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="author" content="LYQ">
+    <title>备忘录</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+<body>
+<header>
+    <h2>我的待办事项</h2>
+    <button type="submit" class="nav-change show" onclick="change(true)" id="choice">多选</button>
+    <button type="submit" class="nav-change hide" onclick="change(false)" id="cancel">取消</button>
+</header>
+<div class="container">
+    <div class="serch">
+        <input type="text" placeholder="请输入备注信息" class="search-input" id="input"/>
+        <button type="submit" class="search-btn" onclick="add()">添加</button>
+    </div>
+    <div class="main">
+        <h2 class="main_title">待办事项列表如下：</h2>
+        <div class="main_content" id="main_content">
+            <p class="main_hint">&nbsp;&nbsp;&nbsp;你当前还没有待办事项哦！</p>
+        </div>
+    </div>
+
+
+</div>
+<footer>
+    <button class="btn_remove_bg" id="btn_remove_bg" onclick="remove_check()">删除</button>
+</footer>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.1-rc2/jquery.js"></script>
+</body>
+</html>

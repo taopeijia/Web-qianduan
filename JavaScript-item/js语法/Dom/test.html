@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script language="javascript" type="text/javascript">
+/*prototype原型链*/
+    /*function Person() {
+
+    }
+
+    var person = new Person();
+    Person.prototype.name = 'Tao';
+    console.log(person.name);
+    person.name = 'Kevin';
+    console.log(person.name);
+    delete person.name;
+    console.log(person.name);
+    console.log(person.__proto__ === Person.prototype);
+    console.log(Person.prototype.__proto__ === Object.prototype);
+    console.log(Object.prototype.__proto__);
+    console.log(Person.prototype.constructor===Person);
+
+    function Foo(y) {
+        this.y = y;
+    };
+    Foo.prototype.x = 10;
+    Foo.prototype.calculate = function () {
+    };
+    var b = new Foo(20);
+    var c = new Foo(30);
+    console.log(b.y);
+    console.log(c.y);
+    console.log(b.x);
+    console.log(c.x);
+    console.log(b.toString());
+    console.log(b.noFunc());//报错*/
+/*prototype原型链*/
+    /*function Mother (age) {
+        this.age = age;
+        this.hobby = ['running','football']
+    }
+    Mother.prototype.showAge = function () {
+        console.log(this.age);
+    };
+    function Person (name, age) {
+        Mother.call(this, age);　　//第二次执行
+        this.name = name;
+    }
+    Person.prototype = new Mother(); 　//第一次执行
+    Person.prototype.constructor = Person;
+    Person.prototype.showName = function () {
+        console.log(this.name);
+    }
+    var p1 = new Person('Jack', 20);
+    p1.hobby.push('basketball'); //p1:'Jack'; __proto__:20,['running','football']
+    var p2 = new Person('Mark', 18); //p2:'Mark'; __proto__:18,['running','football']
+    console.log(p2.hobby);*/
+
+    /*var Person=function(){};
+    Person.say=function(){
+        console.log('I am a Person,I can say.')
+    };
+    Person.prototype.getName=function(name){
+        console.log('My name is '+name);
+    }
+    var carl=new Person;
+    carl.say();
+    carl.getName('Carl');*/
+/*number对象*/
+    /*var numObj1=new Number();
+    var numObj2=new Number(0);
+
+    var numObj3=new Number(-1);
+
+    document.write(numObj1+"<br>");
+
+    document.write(numObj2+"<br>");
+
+    document.write(numObj3+"<br>");
+    var value = Number.MAX_VALUE;
+    document.write(value);*/
+
+/*string对象*/
+    /*var str = "Hello";
+    var out = str.concat("World","!");
+    console.log(str);
+    console.log(out);
+    document.write(str.length);
+    document.write(out);*/
+/*Math对象*/
+    /*var pi_value=Math.PI;
+    document.write(pi_value);
+    document.write("Euler's number: " + Math.E);*/
+
+    /*Date*/
+    var myDate = new Date();
+    document.write(myDate.getDate());
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /*async function basicDemo() {
+        let result = await Math.random();
+        console.log(result);
+    }
+    basicDemo();
+    async function demo01() {
+        return 123;
+    }
+
+    demo01().then(val =>{
+        console.log(val);
+    });*/
+
+
+   /* function sleep(second) {
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('enough sleep');
+            },second)
+        })
+    }
+    function normalFunc() {
+        console.log("normalFunc");
+    }
+    async function awaitDemo() {
+        await normalFunc();
+        console.log("something,~~");
+        let result = await sleep(2000);
+        console.log(result);
+    }
+    awaitDemo();*/
+
+    function sleep(second) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject('want to sleep~');
+            }, second);
+        })
+    }
+
+    async function errorDemo() {
+        let result = await sleep(1000);
+        console.log(result);
+    }
+    errorDemo();
+    async function errorDemoSuper() {
+        try {
+            let result = await sleep(1000);
+            console.log(result);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    errorDemoSuper();
+</script>
+</body>
+</html>

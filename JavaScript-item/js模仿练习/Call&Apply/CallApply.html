@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var scopeTest =(function () {
+        var a = 2;
+
+            function fn(b) {
+                this.b=b;
+                console.log(this.a);
+            }
+            var obj = {a:4,fn:fn};
+            fn();
+            obj.fn();
+            fn.call(obj);fn.call(null);
+            fn.apply(obj);fn.apply(null);
+            var fninstance = new fn(8);
+            console.log(fninstance.b);
+        }
+
+    )();
+</script>
+</html>

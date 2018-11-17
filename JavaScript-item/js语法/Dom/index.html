@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .btn{width: 140px;height: 30px;line-height: 30px;background: #00f;
+            color: #fff;font-size: 14px;text-align: center;border-radius: 10px;
+            cursor: pointer;margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="弹 出" onclick="alert('我是按钮')">
+<!--鼠标划过按钮时调用mouseoverFn的函数-->
+<div   class="btn" onmousemove="mouseoverFn(this,'#f00')"
+      onmouseout="mouseoutFn(this,'#00f')">开始</div>
+<div   class="btn" onmousemove="mouseoverFn(this,'#0f0')"
+      onmouseout="mouseoutFn(this,'#333')">开始</div>
+<script>
+    function mouseoverFn(btn,bgColor) {
+        //鼠标划过按钮时，按钮背景变为红色
+        btn.style.background=bgColor;
+    }
+    function mouseoutFn(btn,bgColor) {
+        btn.style.background =bgColor;
+    }
+</script>
+</body>
+</html>

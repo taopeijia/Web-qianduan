@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="d">
+    <p id="p">
+        <span id="s">
+            Click Me!
+        </span>
+    </p>
+</div>
+</body>
+<script>
+    var div =document.getElementById("d");
+    var p= document.getElementById("p");
+    var span = document.getElementById("s");
+    function onClickFn() {
+        var tagName=event.currentTarget.tagName;
+        var phase=event.eventPhase;
+        console.log(tagName +" "+phase);
+    }
+    div.addEventListener('click',onClickFn,false);
+    p.addEventListener('click',onClickFn,false);
+</script>
+</html>

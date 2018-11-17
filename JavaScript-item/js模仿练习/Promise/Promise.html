@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+
+    // 封装一个get请求的方法
+    var url = 'http://api.douban.com/v2/movie/top250?start=25&count=25';
+    var result;
+
+    var XHR = new XMLHttpRequest();
+    XHR.open('GET', url, true);
+    XHR.send();
+
+    XHR.onreadystatechange = function() {
+        if (XHR.readyState == 4 && XHR.status == 200) {
+            result = XHR.response;
+            console.log(result);
+        }
+    }
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom2</title>
+    <style>
+        .on{
+            border-bottom: 1px solid #0f0;
+        }
+        .current{
+            background:#ccc;
+            color:#f00;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    元素
+</div>
+<ul id ="list1">
+    <li><i>前端开发</i></li>
+    <li class="on"><b>服务器开发</b></li>
+    <li>UI设计</li>
+</ul>
+<script>
+    var lis =document.getElementById("list1").getElementsByTagName("li");
+    for (var i =0,len =lis.length;i<len;i++){
+        console.log(lis[i].innerHTML);
+        lis[i].innerHTML+="程序";
+        lis[1].className = "current";
+    }
+    console.log(document.getElementById("box").className);
+</script>
+</body>
+</html>

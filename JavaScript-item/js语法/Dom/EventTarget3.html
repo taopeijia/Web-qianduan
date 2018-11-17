@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+<div id="box">
+    <button class="btn">按钮</button>
+    <span id="span">
+        <a href="#">百度一下</a>
+    </span>
+    <p>我是段落</p>
+</div>
+<script type="text/javascript">
+        window.onload = function () {
+            //节点的属性操作
+             var img = document.getElementsByTagName("img")[0];
+             //获取节点的属性
+            img.setAttribute("src","icon-2.jpg");//自身带有的属性
+            img.setAttribute("aaa","bbb");//动态添加的属性
+            console.log(img.src);//自身的属性通过点语法获得
+            console.log(img.getAttribute("aaa"));//不属于自身的属性通过getAttribute获得
+
+            // 删除节点的属性
+            img.removeAttribute("src");
+        }
+</script>
+
+</body>
+</html>

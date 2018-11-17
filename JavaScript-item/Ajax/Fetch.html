@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    fetch('https://5a54227777e1d20012fa0723.mockapi.io/api/v1/records')
+        .then(function(response) {
+            return response.text()
+        }).then(function(body) {
+        document.body.innerHTML = body
+    });
+</script>
+</html>

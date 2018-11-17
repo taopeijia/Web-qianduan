@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom</title>
+</head>
+<body>
+
+   <ul id ="list1">
+       <li>前端开发</li>
+       <li>服务器开发</li>
+       <li>UI设计</li>
+   </ul>
+   <ol>
+       <li>javascript原生</li>
+       <li>javascript框架</li>
+   </ol>
+    <script>
+        //设置id为box的这个元素的文字颜色，属性是减号连接的复合形式时
+        //必须转换为驼峰形式
+        //获取id为box的这个元素的文字颜色
+        var box = document.getElementById("box");
+        box.style.color = "#f00";
+        box.style.fontWeight = "bold";
+        //console.log(box);
+        //获取页面中的所有li
+        //var lis = document.getElementsByTagName("li");
+        //console.log(lis.length);
+        //获取id为list1下的所有的li
+        var lis =document.getElementById("list1").getElementsByTagName("li");
+        //console.log(lis2.length);
+        for(var i=0,len = lis.length;i<len;i++)
+        {
+            lis[i].style.color = "#00f";
+            if(i==0){
+                lis[i].style.backgroundColor = "#ccc";
+            }
+            else if(i==1){
+                lis[i].style.backgroundColor = "#666";
+            }
+            else if(i==2){
+                lis[i].style.backgroundColor = "999";
+            }
+        }
+    </script>
+
+</body>
+</html>
